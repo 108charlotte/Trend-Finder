@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class FormSubmission(models.Model): 
-    submission_id = models.IntegerField()
+    submission_id = models.AutoField(primary_key=True)
     time = models.DateTimeField()
     mood = models.CharField(max_length=20)
     productivity = models.TextField()

@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from form.views import indexPageView, listFormEntries, addFormEntry
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", indexPageView, name="index"), 
+    path("listentries", listFormEntries, name="listentries"), 
+    path("addentry", addFormEntry, name="addentry")
 ]

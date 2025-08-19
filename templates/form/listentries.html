@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trend Finder: Entries</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>Entries</h2>
+    {% for entry in entries %}
+        <div class="entry">
+            <h2>{{entry.time}}</h2>
+            <p>Mood: {{entry.mood}}</p>
+            <p>Productivity: {{entry.productivity}}</p>
+            <p>Accomplishment: {{entry.accomplishment}}</p>
+            <p>Stress: {{entry.stress}}</p>
+        </div>
+    {% endfor %}
+  </body>
+</html>
